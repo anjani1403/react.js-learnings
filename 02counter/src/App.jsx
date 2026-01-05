@@ -12,7 +12,10 @@ function App() {
   const addValue = () => {
     // counter = counter + 1;
     if(counter < 20){
-      setCounter(counter + 1)
+      setCounter(prevCounter => prevCounter + 1)
+      setCounter(prevCounter => prevCounter + 1)
+      setCounter(prevCounter => prevCounter + 1)
+      setCounter(prevCounter => prevCounter + 1)
     }
   }
 
@@ -26,13 +29,16 @@ function App() {
     <>
       <h1>Chai aur react</h1>
       <h2>Counter value : {counter}</h2>
+
       <button
         onClick={addValue}
       >Add Value {counter}</button>
       <br/>
+
       <button
         onClick={removeValue}
       >Remove Value {counter}</button>
+      
       <p>footer: {counter}</p>
     </>
   )
